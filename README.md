@@ -199,3 +199,11 @@ ui_kits/
 - **Icons**: Lucide via CDN (substitution).
 - **Accent color**: the warm gold was chosen to read strongly on navy without feeling gaudy. Swap `--accent` in `colors_and_type.css` for a single change across the system.
 - **No photo of Mangpi** was provided. The UI kit's hero uses a quiet monogram ("MJ") placeholder.
+
+## GitHub Pages
+
+The repo is wired for GitHub Pages via `.github/workflows/pages.yml`.
+
+- Push to `main` and the workflow publishes `index.html` and `Resume.html`.
+- In the repository settings, set Pages source to **GitHub Actions**.
+- The site should then appear at your GitHub Pages URL for this repo.
