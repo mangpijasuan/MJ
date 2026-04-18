@@ -202,8 +202,8 @@ ui_kits/
 
 ## GitHub Pages
 
-The repo is wired for GitHub Pages via `.github/workflows/pages.yml`.
+The repo is wired for legacy branch-based GitHub Pages from `main`.
 
-- Push to `main` and the workflow publishes `index.html` and `Resume.html`.
-- In the repository settings, set Pages source to **GitHub Actions**.
-- The site should then appear at your GitHub Pages URL for this repo.
+- Keep the Pages source set to the `main` branch and the root folder.
+- Push to `main` and GitHub Pages publishes the site from `index.html`.
+- The resume download button now points at `uploads/resume.pdf`, which is included in the repo.
