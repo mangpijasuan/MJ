@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .field { display:flex; flex-direction:column; gap:6px; }
+  .field label { font-family:var(--font-sans); font-size:12px; font-weight:600; color:var(--fg-3); letter-spacing:0.08em; text-transform:uppercase; }
+  .field input, .field textarea {
+    font-family:var(--font-sans); font-size:15px; color:var(--fg-1); background:var(--surface);
+    border: 1px solid var(--border-strong); border-radius:2px; padding:10px 12px;
+    transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+    outline: none;
+  }
+  .field input:focus, .field textarea:focus { border-color:var(--accent); box-shadow: var(--ring); }
+</style>
+</head><body>
+<div class="card">
+  <div class="grid-2" style="gap:16px">
+    <div class="field">
+      <label>Name</label>
+      <input value="Mangpi D Jasuan" />
+    </div>
+    <div class="field">
+      <label>Email</label>
+      <input value="mangpi.jasuan@gmail.com" />
+    </div>
+  </div>
+  <div class="field" style="margin-top:14px">
+    <label>Message</label>
+    <textarea rows="2" placeholder="Say hello…"></textarea>
+  </div>
+  <div class="swatch-label" style="margin-top:12px">Input · 15px · r-1 · focus fills emerald halo</div>
+</div>
+</body></html>

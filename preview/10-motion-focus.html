@@ -1,0 +1,35 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  @keyframes slide { 0%{transform:translateX(0)} 50%{transform:translateX(120px)} 100%{transform:translateX(0)} }
+  .dot { width:16px; height:16px; border-radius:999px; background:var(--accent); }
+  .track { position:relative; height:16px; background:var(--surface); border-radius:999px; overflow:hidden; }
+  .dot.ease  { animation: slide 2.4s var(--ease) infinite; }
+  .dot.out   { animation: slide 2.4s var(--ease-out) infinite; }
+  .dot.lin   { animation: slide 2.4s linear infinite; }
+</style>
+</head><body>
+<div class="card">
+  <div class="stack" style="gap:14px">
+    <div class="spec-row" style="border-bottom:none;padding:0">
+      <div class="spec-label">ease</div>
+      <div class="spec-val"><div class="track"><div class="dot ease" style="position:absolute;top:0"></div></div></div>
+      <div class="swatch-label" style="width:200px">cubic-bezier(.2,.6,.2,1)</div>
+    </div>
+    <div class="spec-row" style="border-bottom:none;padding:0">
+      <div class="spec-label">ease-out</div>
+      <div class="spec-val"><div class="track"><div class="dot out" style="position:absolute;top:0"></div></div></div>
+      <div class="swatch-label" style="width:200px">cubic-bezier(.16,1,.3,1)</div>
+    </div>
+    <div class="spec-row" style="border-bottom:none;padding:0">
+      <div class="spec-label">linear</div>
+      <div class="spec-val"><div class="track"><div class="dot lin" style="position:absolute;top:0"></div></div></div>
+      <div class="swatch-label" style="width:200px">avoid — feels robotic</div>
+    </div>
+    <div style="display:flex;gap:24px;padding-top:8px;border-top:1px solid var(--border)">
+      <div><span class="swatch-name">120ms</span> <span class="swatch-label">fast</span></div>
+      <div><span class="swatch-name">200ms</span> <span class="swatch-label">default</span></div>
+      <div><span class="swatch-name">400ms</span> <span class="swatch-label">slow</span></div>
+    </div>
+  </div>
+</div>
+</body></html>

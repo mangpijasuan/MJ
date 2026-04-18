@@ -1,0 +1,77 @@
+/* Shared shell for design-system preview cards.
+   Target: ~700×(variable) px. Skip titles — the asset pane labels cards. */
+@import url('../colors_and_type.css');
+
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--fg-2);
+  font-family: var(--font-sans);
+  padding: 24px;
+  box-sizing: border-box;
+}
+.card {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.row { display: flex; gap: 16px; align-items: center; }
+.stack { display: flex; flex-direction: column; gap: 12px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+
+.swatch {
+  height: 56px;
+  border-radius: 2px;
+  border: 1px solid rgba(26,24,20,0.05);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 6px 8px;
+  box-sizing: border-box;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--fg-1);
+}
+.swatch.dark { color: var(--light-1); }
+.swatch-label {
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--fg-3);
+  line-height: 1.3;
+}
+.swatch-name {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--fg-1);
+}
+.spec-row {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.spec-row:last-child { border-bottom: none; }
+.spec-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-3);
+  width: 96px;
+  flex-shrink: 0;
+}
+.spec-val { flex: 1; }
+
+.eyebrow-demo {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
