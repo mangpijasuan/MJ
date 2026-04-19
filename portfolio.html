@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio | Mangpi Jasuan — Zomi-GPT, Quant Terminal, Zomi Tech Hub</title>
+<meta name="description" content="Portfolio of Mangpi Jasuan featuring Zomi-GPT, Integrated Quant Terminal, and Zomi Tech Hub, with project summaries and case snapshots." />
+<link rel="canonical" href="https://mangpijasuan.github.io/MJ/portfolio.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Mangpi Jasuan" />
+<meta property="og:title" content="Portfolio | Mangpi Jasuan — Zomi-GPT, Quant Terminal, Zomi Tech Hub" />
+<meta property="og:description" content="Portfolio of Mangpi Jasuan featuring Zomi-GPT, Integrated Quant Terminal, and Zomi Tech Hub, with project summaries and case snapshots." />
+<meta property="og:url" content="https://mangpijasuan.github.io/MJ/portfolio.html" />
+<meta property="og:image" content="https://mangpijasuan.github.io/MJ/og-image.svg" />
+<meta property="og:image:alt" content="Mangpi Jasuan personal website preview with software, AI/ML, and quant project branding" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Portfolio | Mangpi Jasuan — Zomi-GPT, Quant Terminal, Zomi Tech Hub" />
+<meta name="twitter:description" content="Portfolio of Mangpi Jasuan featuring Zomi-GPT, Integrated Quant Terminal, and Zomi Tech Hub, with project summaries and case snapshots." />
+<meta name="twitter:image" content="https://mangpijasuan.github.io/MJ/og-image.svg" />
+<meta name="twitter:image:alt" content="Mangpi Jasuan personal website preview with software, AI/ML, and quant project branding" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0B1A33;
+    --surface: #122340;
+    --surface2: #1B2E4F;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.14);
+    --accent: #00e5a0;
+    --accent2: #4f9eff;
+    --text: #E9ECF2;
+    --text-strong: #FFFFFF;
+    --muted: #8892a8;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --mono: 'DM Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    --sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(circle at 20% 10%, rgba(79, 158, 255, 0.08) 0%, transparent 42%), radial-gradient(circle at 90% 80%, rgba(0, 229, 160, 0.08) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  .wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .topnav {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(11, 26, 51, 0.86);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .topnav-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .brand {
+    color: var(--text-strong);
+    text-decoration: none;
+    font-family: var(--serif);
+    font-size: 18px;
+    letter-spacing: 0.04em;
+  }
+
+  .brand em { color: var(--accent); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 22px;
+  }
+
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+  }
+
+  .nav-links a:hover { color: var(--text-strong); }
+
+  .nav-links .is-active {
+    color: var(--accent2);
+    font-family: var(--mono);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+
+  .nav-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.02);
+    color: var(--text-strong);
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    display: none;
+    border-top: 1px solid var(--border);
+    padding: 8px 0 14px;
+  }
+
+  .mobile-menu a {
+    display: block;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 10px 32px;
+    font-size: 14px;
+  }
+
+  .mobile-menu a:hover { color: var(--text-strong); }
+
+  .mobile-menu.open { display: block; }
+
+  header {
+    padding: 72px 0 48px;
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--accent2);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(38px, 6vw, 66px);
+    line-height: 1.05;
+    color: var(--text-strong);
+    font-weight: 400;
+    max-width: 700px;
+  }
+
+  .lede {
+    margin-top: 18px;
+    max-width: 690px;
+    color: var(--muted);
+    line-height: 1.75;
+    font-size: 16px;
+  }
+
+  .section-label {
+    margin: 12px 0 24px;
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .projects-grid {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 54px;
+  }
+
+  .project-card {
+    background: linear-gradient(140deg, rgba(18, 35, 64, 1), rgba(16, 30, 55, 0.95));
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 26px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .project-card:hover {
+    border-color: rgba(79, 158, 255, 0.45);
+    transform: translateY(-2px);
+  }
+
+  .project-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .project-title {
+    font-family: var(--serif);
+    font-size: 26px;
+    line-height: 1.15;
+    color: var(--text-strong);
+  }
+
+  .status {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 9px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 229, 160, 0.34);
+    background: rgba(0, 229, 160, 0.12);
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .project-desc {
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 14.5px;
+  }
+
+  .chip-row {
+    margin-top: 14px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .chip {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent2);
+    background: rgba(79, 158, 255, 0.14);
+    border: 1px solid rgba(79, 158, 255, 0.28);
+    border-radius: 999px;
+    padding: 4px 10px;
+  }
+
+  .card-links {
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .card-links a {
+    text-decoration: none;
+    color: var(--text);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 13px;
+  }
+
+  .card-links a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .case-study-grid {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 56px;
+  }
+
+  .case-study {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+  }
+
+  .case-study h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+    color: var(--text-strong);
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .case-meta {
+    color: var(--accent2);
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+
+  .case-study p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+
+  .case-study strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .roadmap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 56px;
+  }
+
+  .roadmap h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    color: var(--text-strong);
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .roadmap p {
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .roadmap ul {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+
+  .roadmap li {
+    color: var(--text);
+    font-size: 14px;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .roadmap li::before {
+    content: '\2192';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 11px;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 30px 0 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .footer-name {
+    color: var(--muted);
+    font-family: var(--serif);
+    font-size: 18px;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 16px;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+  }
+
+  .footer-links a:hover { color: var(--accent); }
+
+  @media (max-width: 700px) {
+    .wrapper { padding: 0 20px; }
+    .topnav-inner { padding: 14px 20px; }
+    .project-title { font-size: 22px; }
+    .project-top { flex-direction: column; }
+  }
+
+  @media (max-width: 520px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+    .mobile-menu a { padding-left: 20px; padding-right: 20px; }
+  }
+</style>
+</head>
+<body>
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a class="brand" href="index.html">M<em>J</em></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="is-active" href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-controls="mobileMenu" aria-expanded="false">☰</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+    <header>
+      <div class="eyebrow">Selected Work</div>
+      <h1>Projects that connect software, AI/ML, and real-world operations.</h1>
+      <p class="lede">This page is the project layer of my personal site. It will keep expanding with deeper case studies, architecture notes, and demos as I ship more work.</p>
+    </header>
+
+    <section>
+      <div class="section-label">Featured Projects</div>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-top">
+            <h2 class="project-title">Zomi-GPT</h2>
+            <span class="status">In Progress</span>
+          </div>
+          <p class="project-desc">An AI assistant project focused on Zomi-language and community-first interactions. It explores practical LLM workflows for culturally relevant support and multilingual communication.</p>
+          <div class="chip-row">
+            <span class="chip">Python</span>
+            <span class="chip">OpenAI API</span>
+            <span class="chip">LLM Workflows</span>
+            <span class="chip">Prompt Design</span>
+            <span class="chip">Community AI</span>
+          </div>
+          <div class="card-links">
+            <a href="#case-ai">Read case summary</a>
+            <a href="https://github.com/mangpijasuan/Zomi-GPT" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <h2 class="project-title">Integrated Quant Terminal</h2>
+            <span class="status">Completed</span>
+          </div>
+          <p class="project-desc">A quantitative research and terminal-style analytics project combining market data views, strategy exploration, and risk-aware decision support for trading workflows.</p>
+          <div class="chip-row">
+            <span class="chip">Python</span>
+            <span class="chip">Quant Analytics</span>
+            <span class="chip">Backtesting</span>
+            <span class="chip">Market Data</span>
+            <span class="chip">Risk Tools</span>
+          </div>
+          <div class="card-links">
+            <a href="#case-dashboard">Read case summary</a>
+            <a href="https://github.com/mangpijasuan/Integrated-Quant-Terminal" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <h2 class="project-title">Zomi Tech Hub</h2>
+            <span class="status">Ongoing</span>
+          </div>
+          <p class="project-desc">A broad platform initiative combining AI, fintech, and forward-looking technology exploration with a mission to preserve and elevate Zomi culture through modern tools.</p>
+          <div class="chip-row">
+            <span class="chip">Python</span>
+            <span class="chip">AI Platform</span>
+            <span class="chip">Fintech Concepts</span>
+            <span class="chip">Culture + Tech</span>
+            <span class="chip">Product Vision</span>
+          </div>
+          <div class="card-links">
+            <a href="#case-toolkit">Read case summary</a>
+            <a href="https://github.com/mangpijasuan/Zomi-Tech-Hub" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">Case Snapshots</div>
+      <div class="case-study-grid">
+        <article class="case-study" id="case-ai">
+          <h3>Zomi-GPT</h3>
+          <div class="case-meta">Problem -> System -> Outcome</div>
+          <p><strong>Problem:</strong> Many community members need AI tools that are culturally relevant and linguistically accessible, not generic assistants.</p>
+          <p><strong>System:</strong> Designed an LLM-based assistant approach centered on Zomi context, response quality, and practical user support scenarios.</p>
+          <p><strong>Outcome:</strong> Established a foundation for community-first AI interactions and a roadmap for deeper multilingual capabilities.</p>
+        </article>
+
+        <article class="case-study" id="case-dashboard">
+          <h3>Integrated Quant Terminal</h3>
+          <div class="case-meta">Problem -> System -> Outcome</div>
+          <p><strong>Problem:</strong> Quant workflows often require jumping between fragmented tools for signal review, risk checks, and strategy iteration.</p>
+          <p><strong>System:</strong> Built a terminal-style integration that centralizes quantitative analysis, strategy testing flow, and monitoring context.</p>
+          <p><strong>Outcome:</strong> Improved research continuity and reduced context switching for faster experiment-to-decision cycles.</p>
+        </article>
+
+        <article class="case-study" id="case-toolkit">
+          <h3>Zomi Tech Hub</h3>
+          <div class="case-meta">Problem -> System -> Outcome</div>
+          <p><strong>Problem:</strong> Emerging communities are often underrepresented in advanced tech ecosystems and lack tailored innovation platforms.</p>
+          <p><strong>System:</strong> Framed a platform concept that blends AI exploration, fintech learning pathways, and cultural preservation goals.</p>
+          <p><strong>Outcome:</strong> Created a scalable product direction that connects technical experimentation with long-term community impact.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="roadmap">
+      <h2>What I will add next</h2>
+      <p>As this portfolio matures, each project will include stronger proof of impact and decision making.</p>
+      <ul>
+        <li>Problem framing, constraints, and trade-offs for each project.</li>
+        <li>Architecture diagrams and deployment details.</li>
+        <li>Before-and-after metrics where applicable.</li>
+        <li>Short demo clips and links to public repositories.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <div class="footer-name">Mangpi Jasuan</div>
+      <div class="footer-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="mailto:mangpi.jasuan@gmail.com">EMAIL</a>
+        <a href="https://www.linkedin.com/in/mangpi-jasuan-b72ba4163/" target="_blank" rel="noopener">LINKEDIN</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      navToggle.textContent = isOpen ? '✕' : '☰';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.textContent = '☰';
+      });
+    });
+  </script>
+</body>
+</html>

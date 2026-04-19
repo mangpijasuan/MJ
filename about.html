@@ -3,8 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mangpi Jasuan — Software Engineer & AI/ML</title>
-<meta name="description" content="Mangpi Jasuan — Computer Science student at Northeastern State University. Software engineer exploring AI/ML, full-stack, and data." />
+<title>About Mangpi Jasuan | Software Engineer & AI/ML</title>
+<meta name="description" content="About Mangpi Jasuan: software engineering path, AI/ML interests, professional experience, technical skills, and education." />
+<link rel="canonical" href="https://mangpijasuan.github.io/MJ/about.html" />
+<meta property="og:type" content="profile" />
+<meta property="og:site_name" content="Mangpi Jasuan" />
+<meta property="og:title" content="About Mangpi Jasuan | Software Engineer & AI/ML" />
+<meta property="og:description" content="About Mangpi Jasuan: software engineering path, AI/ML interests, professional experience, technical skills, and education." />
+<meta property="og:url" content="https://mangpijasuan.github.io/MJ/about.html" />
+<meta property="og:image" content="https://mangpijasuan.github.io/MJ/og-image.svg" />
+<meta property="og:image:alt" content="Mangpi Jasuan personal website preview with software, AI/ML, and quant project branding" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="About Mangpi Jasuan | Software Engineer & AI/ML" />
+<meta name="twitter:description" content="About Mangpi Jasuan: software engineering path, AI/ML interests, professional experience, technical skills, and education." />
+<meta name="twitter:image" content="https://mangpijasuan.github.io/MJ/og-image.svg" />
+<meta name="twitter:image:alt" content="Mangpi Jasuan personal website preview with software, AI/ML, and quant project branding" />
 <template id="__bundler_thumbnail">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
     <rect width="100" height="100" fill="#0B1A33"/>
@@ -509,6 +522,37 @@
   }
   .nav-links a:hover { color: var(--text-strong); }
 
+  .nav-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.02);
+    color: var(--text-strong);
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    display: none;
+    border-top: 1px solid var(--border);
+    padding: 8px 0 14px;
+  }
+
+  .mobile-menu a {
+    display: block;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 10px 32px;
+    font-size: 14px;
+  }
+
+  .mobile-menu a:hover { color: var(--text-strong); }
+
+  .mobile-menu.open { display: block; }
+
   /* ── HERO META ── */
   .hero-meta {
     font-family: var(--mono);
@@ -582,6 +626,8 @@
   }
   @media (max-width: 480px) {
     .nav-links { display: none; }
+    .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+    .mobile-menu a { padding-left: 20px; padding-right: 20px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -597,15 +643,28 @@
 
 <nav class="topnav" id="topnav">
   <div class="topnav-inner">
-    <a class="brand" href="#top">M<em>J</em></a>
+    <a class="brand" href="index.html">M<em>J</em></a>
     <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-controls="mobileMenu" aria-expanded="false">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
@@ -622,6 +681,10 @@
       <a class="btn btn-primary" href="uploads/resume.pdf" download>
         <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14"/></svg>
         Download resume
+      </a>
+      <a class="btn btn-secondary" href="portfolio.html">
+        <svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+        View portfolio
       </a>
       <a class="btn btn-secondary" href="mailto:mangpi.jasuan@gmail.com">
         <svg viewBox="0 0 24 24"><path d="M3 7l9 6 9-6M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7M3 7a2 2 0 012-2h14a2 2 0 012 2"/></svg>
@@ -916,6 +979,8 @@
   <footer class="reveal" id="contact">
     <div class="footer-name">Mangpi Jasuan</div>
     <div class="footer-links">
+      <a href="index.html">HOME</a>
+      <a href="portfolio.html">PORTFOLIO</a>
       <a href="mailto:mangpi.jasuan@gmail.com">EMAIL</a>
       <a href="https://github.com/mangpijasuan" target="_blank" rel="noopener">GITHUB</a>
       <a href="https://www.linkedin.com/in/mangpi-jasuan-b72ba4163/" target="_blank" rel="noopener">LINKEDIN</a>
@@ -925,6 +990,23 @@
 </div>
 
 <script>
+  const navToggle = document.getElementById('navToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  navToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    navToggle.textContent = isOpen ? '✕' : '☰';
+  });
+
+  mobileMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.textContent = '☰';
+    });
+  });
+
   const reveals = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
